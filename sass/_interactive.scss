@@ -3,16 +3,16 @@
 .interactive {
     margin-top: 80px;
     text-align: center;
+
+    @include breakpoint-up(large) {
+        margin-top: 120px;
+    }
     .row {
         justify-content: center;
         @include breakpoint-up (large) {
             justify-content: flex-start;
         }
     }
-    &__image {
-        
-    }
-    &__col {}
     &__description {
         padding: 40px 20px;
         h1 {

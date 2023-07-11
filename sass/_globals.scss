@@ -84,6 +84,33 @@ img {
         padding-right: 0.9375rem;
     }
 }
+.col-4 {
+    width: 100%;
+    // &:not(:first-of-type){
+    //     padding-left: 1.5rem; 
+    // }
+    // &:not(:last-of-type){
+    //     padding-right: 1.5rem;
+    // }
+    // &:nth-of-type(2) {
+    //     padding: 0;
+    // }
+    @include breakpoint-up(medium) {
+        width: 50%;
+        &:nth-child(2n+1) {
+            padding-right: 0.9375rem;
+        }
+    }
+    @include breakpoint-up(large) {
+        width: 25%;
+        &:not(:first-of-type) {
+            padding-left: 0.9375rem;
+        }
+        &:not(:last-of-type) {
+            padding-right: 0.9375rem;
+        }
+    }
+}
 .position-relative {
     position: relative;
 }

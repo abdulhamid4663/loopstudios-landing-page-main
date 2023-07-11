@@ -8,6 +8,12 @@
     min-height: 98vh;
     padding-top: 35px;
 
+    @include breakpoint-up(large) {
+        background-image: url('../images/desktop/image-hero.jpg');
+        min-height: 80vh;
+        padding-top: 45px;
+    }
+
     &.open {
         .hamburger {
             span {
@@ -119,14 +125,17 @@
             padding: 30px;
 
             @include breakpoint-up(medium) {
-                font-size: 50px;
+                font-size: 52px;
             }
             @include breakpoint-up(large) {
                 font-size: 60px;
             }
         }
+        @include breakpoint-up(medium) {
+            width: 500px;
+        }
         @include breakpoint-up(large) {
-            width: 60%;
+            width: 52%;
         }
     }
 }
