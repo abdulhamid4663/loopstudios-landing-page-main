@@ -3,6 +3,10 @@
 .creation {
     margin: 120px 0 100px;
 
+    @include breakpoint-up(large) {
+        margin: 200px 0 100px;
+    }
+
     &__header {
         margin-bottom: 40px;
         > .row {
@@ -47,6 +51,19 @@
         }
     }
     &__card-image {
+        @include breakpoint-up(large) {
+            img {
+                transition: opacity 200ms ease-in-out;
+            }
+            &:hover {
+                img {
+                    opacity: 0.4;
+                }
+                h3 {
+                    color: $black;
+                }
+            }
+        }  
         h3 {
             position: absolute;
             bottom: 25px;
@@ -56,6 +73,7 @@
             width: 150px;
             text-transform: uppercase;
             font-family: $fontJosefin;
+            transition: color 200ms ease-in-out;
         }
     }
 }

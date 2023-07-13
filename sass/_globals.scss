@@ -13,7 +13,7 @@ img {
     margin: auto;
     
     @include breakpoint-up(large) {
-        width: 64em;
+        width: 63em;
     }
     @include breakpoint-up(xlarge) {
         width: 69.375em;
@@ -41,15 +41,18 @@ img {
     // &:nth-of-type(2) {
     //     padding: 0;
     // }
-    &:not(:first-of-type) {
-        padding-left: 0.9375rem;
-    }
-    &:not(:last-of-type) {
-        padding-right: 0.9375rem;
+    @include breakpoint-up(large) {
+        width: 25%;
+        &:not(:first-of-type) {
+            padding-left: 0.9375rem;
+        }
+        &:not(:last-of-type) {
+            padding-right: 0.9375rem;
+        }
     }
 }
 .col-2 {
-    width: 50%;
+    width: 100%;
     // &:not(:first-of-type){
     //     padding-left: 1.5rem;
     // }
@@ -59,15 +62,18 @@ img {
     // &:nth-of-type(2) {
     //     padding: 0;
     // }
-    &:not(:first-of-type) {
-        padding-left: 0.9375rem;
-    }
-    &:not(:last-of-type) {
-        padding-right: 0.9375rem;
+    @include breakpoint-up(large) {
+        width: 50%;
+        &:not(:first-of-type) {
+            padding-left: 0.9375rem;
+        }
+        &:not(:last-of-type) {
+            padding-right: 0.9375rem;
+        }
     }
 }
 .col-3 {
-    width: 33.33%;
+    width: 100%;
     // &:not(:first-of-type){
     //     padding-left: 1.5rem; 
     // }
@@ -77,11 +83,14 @@ img {
     // &:nth-of-type(2) {
     //     padding: 0;
     // }
-    &:not(:first-of-type) {
-        padding-left: 0.9375rem;
-    }
-    &:not(:last-of-type) {
-        padding-right: 0.9375rem;
+    @include breakpoint-up(large) {
+        width: 25%;
+        &:not(:first-of-type) {
+            padding-left: 0.9375rem;
+        }
+        &:not(:last-of-type) {
+            padding-right: 0.9375rem;
+        }
     }
 }
 .col-4 {
@@ -95,12 +104,6 @@ img {
     // &:nth-of-type(2) {
     //     padding: 0;
     // }
-    @include breakpoint-up(medium) {
-        width: 50%;
-        &:nth-child(2n+1) {
-            padding-right: 0.9375rem;
-        }
-    }
     @include breakpoint-up(large) {
         width: 25%;
         &:not(:first-of-type) {
@@ -116,6 +119,17 @@ img {
 }
 .position-absolute {
     position: absolute;
+}
+.text-align {
+    &-start {
+        text-align: start;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-end {
+        text-align: end;
+    }
 }
 ul {
     list-style-type: none;
