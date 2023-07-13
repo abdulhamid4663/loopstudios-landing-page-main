@@ -187,3 +187,33 @@ a, a:hover,a:visited {
 .no-scroll {
     overflow: hidden;
 }
+.gap {
+    &-y {
+        gap: 1rem 0;
+    }
+    &-x {
+        @include breakpoint-up (medium) {
+            gap: 2rem;            
+        }
+        @include breakpoint-up (large) {
+            gap: 1.6rem;
+        }
+        @include breakpoint-up (xlarge) {
+            gap: 1.8rem;
+        }
+    }
+}
+.p {
+    &-b {
+        padding-bottom: 1rem;
+        @include breakpoint-up (medium) {
+            padding-bottom: 2rem;           
+        }
+        @include breakpoint-up (large) {
+            padding-bottom: 1.6rem;
+        }
+        @include breakpoint-up (xlarge) {
+            padding-bottom: 1.8rem;
+        }
+    }
+}

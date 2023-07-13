@@ -1,0 +1,61 @@
+// CREATION SECTION 
+
+.creation {
+    margin: 120px 0 100px;
+
+    &__header {
+        margin-bottom: 40px;
+        > .row {
+            @include breakpoint-up(large) {
+                justify-content: space-between;
+            }
+        }
+        h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-family: $fontJosefin;
+            @include breakpoint-up(large) {
+                font-size: 52px;
+                text-align: start;
+            }
+        }
+    }
+    &__btn {
+        color: $black;
+        border: 1px solid $black;
+        padding: 10px 40px;
+        text-transform: uppercase;
+        font-family: $fontAlata;
+        letter-spacing: 4px;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+    &__card {
+        width: 100%;
+        @include breakpoint-up(medium) {
+            width: 47%;
+        }
+        @include breakpoint-up(large) {
+            width: 23%;
+        }
+        @include breakpoint-up(xlarge) {
+            
+        }
+    }
+    &__card-image {
+        h3 {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            color: $white;
+            font-size: 27px;
+            width: 150px;
+            text-transform: uppercase;
+            font-family: $fontJosefin;
+        }
+    }
+}
